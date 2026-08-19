@@ -1,0 +1,215 @@
+/* ReneeWebCrew - Diseño página principal */
+
+/* PALETA COTTAGE CORE */
+:root {
+    --sage: #AEB78C;
+    --olive: #898C43;
+    --forest: #3E5728;
+    --cream: #F1E5C3;
+    --gold: #C3A24B;
+    --brown: #95672F;
+}
+
+/* ESTILO GENERAL */
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--forest);
+    font-family: Arial, sans-serif;
+}
+
+/* BARRA LATERAL IZQUIERDA */
+.barra-lateral {
+    background-color: var(--sage);
+    min-height: 100vh;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Logo o avatar principal */
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--cream);
+    border: 4px solid var(--forest);
+    margin-bottom: 15px;
+}
+
+.barra-lateral h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.bio {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Botones del menú lateral */
+.menu a {
+    display: block;
+    text-decoration: none;
+    background-color: var(--cream);
+    color: var(--forest);
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+}
+
+.menu a:hover {
+    background-color: var(--gold);
+}
+
+/* CONTENIDO CENTRAL */
+.contenido {
+    padding: 30px;
+}
+
+/* Ubicación, notificaciones y mensaje positivo */
+.superior {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.caja-superior {
+    background-color: var(--sage);
+    border-radius: 18px;
+    padding: 12px 18px;
+}
+
+.mensaje-positivo {
+    background-color: var(--gold);
+}
+
+/* PANEL PRINCIPAL */
+.panel {
+    background-color: #F8F0D7;
+    border: 2px solid var(--sage);
+    border-radius: 25px;
+    padding: 25px;
+}
+
+/* Cajas de tareas, desplegable, noticias y fotos */
+.bloque {
+    background-color: var(--sage);
+    border-radius: 18px;
+    padding: 20px;
+    min-height: 170px;
+}
+
+.bloque h3 {
+    font-size: 19px;
+}
+
+/* FEED DEL GRUPO */
+.feed {
+    background-color: var(--olive);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 22px 0;
+}
+
+.comentario {
+    background-color: var(--cream);
+    color: var(--forest);
+    padding: 10px;
+    border-radius: 14px;
+    margin-top: 10px;
+}
+
+/* IMÁGENES DE NOTICIAS */
+.noticia {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 8px;
+    background-color: var(--gold);
+}
+
+/* FOTOS DEL GRUPO */
+.foto {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 5px;
+    background-color: var(--cream);
+}
+
+/* COLUMNA DERECHA */
+.derecha {
+    background-color: #E5D7AE;
+    padding: 30px 20px;
+}
+
+.caja-derecha {
+    background-color: var(--sage);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.actividad {
+    background-color: var(--cream);
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Canción del día */
+.cancion {
+    background-color: var(--forest);
+    color: var(--cream);
+}
+
+.cancion a {
+    color: var(--gold);
+}
+
+/* SCROLL DE INTEGRANTES */
+.integrantes {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.integrante {
+    min-width: 120px;
+    background-color: var(--gold);
+    color: var(--forest);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.mini-avatar {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    background-color: var(--cream);
+}
+
+/* ADAPTACIÓN A MÓVIL */
+@media (max-width: 991px) {
+    .barra-lateral {
+        min-height: auto;
+    }
+
+    .derecha {
+        margin-top: 20px;
+    }
+}
