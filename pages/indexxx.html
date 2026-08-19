@@ -1,403 +1,901 @@
-<!-- ========================================= -->
-<!-- IMAGEN / AVATAR DEL GRUPO                 -->
-<!-- ========================================= -->
+<!DOCTYPE html>
+<html lang="es">
 
-<!--
-    CAMBIAR:
-    "IMG/logo/logo.png"
-    por la ruta real de vuestro logo o imagen.
+<head>
 
-    EJEMPLO:
-    IMG/logo/reneewebcrew.png
--->
+    <meta charset="UTF-8">
 
-<img
-    src="IMG/logo/logo.png"
-    alt="Logo de ReneeWebCrew"
-    class="avatar"
->
-<!-- ========================================= -->
-<!-- NOMBRE Y BIOGRAFÍA DEL GRUPO              -->
-<!-- ========================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h2>
-    ReneeWebCrew
-</h2>
+    <title>ReneeWebCrew</title>
 
-<!--
-    RELLENAR:
-    Aquí va una frase breve que describa al grupo.
-    Intentad que sea de 1 o 2 líneas.
--->
 
-<p class="bio">
+    <!-- ========================================= -->
+    <!-- BOOTSTRAP                                 -->
+    <!-- Referencia: https://getbootstrap.com/     -->
+    <!-- ========================================= -->
 
-    [ESCRIBIR AQUÍ LA BIOGRAFÍA DEL GRUPO]
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-</p>
-<!-- ========================================= -->
-<!-- NÚMERO DE NOTIFICACIONES                  -->
-<!-- ========================================= -->
 
-<button class="caja-superior border-0">
+    <!-- ========================================= -->
+    <!-- NUESTRO CSS                               -->
+    <!-- ========================================= -->
 
-    🔔 Notificaciones
+    <link rel="stylesheet" href="CSS/styles.css">
 
-    <!--
-        RELLENAR:
-        Cambiar el número "3" por el número
-        de notificaciones que queráis mostrar.
-    -->
+</head>
 
-    <span class="badge bg-danger">
 
-        3
+<body>
 
-    </span>
 
-</button>
-<!-- ========================================= -->
-<!-- MENSAJE POSITIVO DEL DÍA                  -->
-<!-- ========================================= -->
+<div class="container-fluid">
 
-<div class="caja-superior mensaje-positivo">
+    <div class="row">
 
-    <!--
-        RELLENAR:
-        Cambiar esta frase por el mensaje
-        positivo que queráis mostrar ese día.
 
-        EJEMPLO:
-        "Hoy es un buen día para avanzar 🌿"
-    -->
+        <!-- ========================================= -->
+        <!-- COLUMNA IZQUIERDA                         -->
+        <!-- ========================================= -->
 
-    [ESCRIBIR AQUÍ EL MENSAJE POSITIVO]
+        <aside class="col-lg-2 barra-lateral">
+
+
+            <!-- ========================================= -->
+            <!-- IMAGEN / AVATAR DEL GRUPO                 -->
+            <!-- ========================================= -->
+
+            <!--
+                CAMBIAR:
+                "IMG/logo/logo.png"
+
+                por la ruta real de vuestro logo.
+
+                EJEMPLO:
+                IMG/logo/reneewebcrew.png
+            -->
+
+            <img
+                src="IMG/logo/logo.png"
+                alt="Logo de ReneeWebCrew"
+                class="avatar"
+            >
+
+
+
+            <!-- ========================================= -->
+            <!-- NOMBRE DEL GRUPO                          -->
+            <!-- ========================================= -->
+
+            <h2>
+
+                ReneeWebCrew
+
+            </h2>
+
+
+
+            <!-- ========================================= -->
+            <!-- BIOGRAFÍA DEL GRUPO                       -->
+            <!-- ========================================= -->
+
+            <!--
+                RELLENAR:
+
+                Aquí va una frase breve
+                que describa al grupo.
+            -->
+
+            <p class="bio">
+
+                [ESCRIBIR AQUÍ LA BIOGRAFÍA DEL GRUPO]
+
+            </p>
+
+
+
+            <!-- ========================================= -->
+            <!-- MENÚ PRINCIPAL                            -->
+            <!-- ========================================= -->
+
+            <nav class="menu">
+
+
+                <a href="#">
+
+                    🏠 Inicio
+
+                </a>
+
+
+                <a href="#">
+
+                    👥 Grupo
+
+                </a>
+
+
+                <a href="#">
+
+                    ✅ Tareas
+
+                </a>
+
+
+                <a href="#">
+
+                    ⚡ Acceso rápido
+
+                </a>
+
+
+                <a href="#">
+
+                    ⚙️ Configuración
+
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+
+        <!-- ========================================= -->
+        <!-- COLUMNA CENTRAL                           -->
+        <!-- ========================================= -->
+
+        <main class="col-lg-7 contenido">
+
+
+
+            <!-- ========================================= -->
+            <!-- PARTE SUPERIOR                            -->
+            <!-- ========================================= -->
+
+            <header class="superior">
+
+
+
+                <!-- ========================================= -->
+                <!-- UBICACIÓN                                 -->
+                <!-- ========================================= -->
+
+                <!--
+                    RELLENAR:
+
+                    Aquí podéis poner la universidad,
+                    campus o ubicación.
+
+                    Más adelante puede convertirse
+                    en enlace a Google Maps.
+                -->
+
+                <div class="caja-superior">
+
+                    📍 Universidad Autónoma de Chile
+
+                    <br>
+
+                    <small>
+
+                        [UBICACIÓN / CAMPUS]
+
+                    </small>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- NÚMERO DE NOTIFICACIONES                  -->
+                <!-- ========================================= -->
+
+                <button class="caja-superior border-0">
+
+                    🔔 Notificaciones
+
+
+                    <!--
+                        RELLENAR:
+
+                        Cambiar el número 3
+                        por las notificaciones reales.
+                    -->
+
+                    <span class="badge bg-danger">
+
+                        3
+
+                    </span>
+
+
+                </button>
+
+
+
+                <!-- ========================================= -->
+                <!-- MENSAJE POSITIVO DEL DÍA                  -->
+                <!-- ========================================= -->
+
+                <div class="caja-superior mensaje-positivo">
+
+
+                    <!--
+                        RELLENAR:
+
+                        EJEMPLO:
+                        Hoy es un buen día para avanzar 🌿
+                    -->
+
+                    [ESCRIBIR AQUÍ EL MENSAJE POSITIVO]
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- ========================================= -->
+            <!-- PANEL PRINCIPAL                           -->
+            <!-- ========================================= -->
+
+            <section class="panel">
+
+
+
+                <!-- ========================================= -->
+                <!-- PRIMERA FILA                              -->
+                <!-- ========================================= -->
+
+                <div class="row g-4">
+
+
+
+                    <!-- ========================================= -->
+                    <!-- TAREAS DEL DÍA                            -->
+                    <!-- ========================================= -->
+
+                    <div class="col-md-6">
+
+                        <section class="bloque">
+
+
+                            <h3>
+
+                                ✅ Tareas del día
+
+                            </h3>
+
+
+                            <!-- RELLENAR -->
+
+                            <p>
+
+                                • [TAREA 1]
+
+                            </p>
+
+
+                            <p>
+
+                                • [TAREA 2]
+
+                            </p>
+
+
+                            <p>
+
+                                • [TAREA 3]
+
+                            </p>
+
+
+                        </section>
+
+                    </div>
+
+
+
+                    <!-- ========================================= -->
+                    <!-- DESPLEGABLE                               -->
+                    <!-- ========================================= -->
+
+                    <div class="col-md-6">
+
+                        <section class="bloque">
+
+
+                            <h3>
+
+                                📌 Crear / consultar
+
+                            </h3>
+
+
+
+                            <!--
+                                Este desplegable usa Bootstrap.
+
+                                Opciones:
+                                Grupo
+                                Tarea
+                                Pruebas
+                            -->
+
+                            <div class="dropdown mt-4">
+
+
+                                <button
+                                    class="btn dropdown-toggle"
+                                    style="background-color:#C3A24B;"
+                                    data-bs-toggle="dropdown"
+                                >
+
+                                    Seleccionar
+
+                                </button>
+
+
+
+                                <ul class="dropdown-menu">
+
+
+                                    <li>
+
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
+                                        >
+
+                                            👥 Grupo
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
+                                        >
+
+                                            ✅ Tarea
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
+                                        >
+
+                                            📝 Pruebas
+
+                                        </a>
+
+                                    </li>
+
+
+                                </ul>
+
+
+                            </div>
+
+
+                        </section>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- FEED / MENSAJES DEL GRUPO                 -->
+                <!-- ========================================= -->
+
+                <section class="feed">
+
+
+                    <h3>
+
+                        💬 Feed del grupo
+
+                    </h3>
+
+
+
+                    <!--
+                        RELLENAR:
+
+                        Nombre de la persona
+                        y mensaje.
+                    -->
+
+                    <div class="comentario">
+
+
+                        <strong>
+
+                            [NOMBRE]:
+
+                        </strong>
+
+
+                        [ESCRIBIR MENSAJE]
+
+
+                    </div>
+
+
+
+                    <div class="comentario">
+
+
+                        <strong>
+
+                            [NOMBRE]:
+
+                        </strong>
+
+
+                        [ESCRIBIR MENSAJE]
+
+
+                    </div>
+
+
+
+                    <!-- Esta caja simula escribir -->
+
+                    <div class="comentario">
+
+                        💬 Escribir comentario...
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ========================================= -->
+                <!-- SEGUNDA FILA                              -->
+                <!-- ========================================= -->
+
+                <div class="row g-4">
+
+
+
+                    <!-- ========================================= -->
+                    <!-- NOTICIA DEL DÍA / SEMANA                  -->
+                    <!-- ========================================= -->
+
+                    <div class="col-md-6">
+
+                        <section class="bloque">
+
+
+                            <h3>
+
+                                📰 Noticias
+
+                            </h3>
+
+
+
+                            <!--
+                                RELLENAR:
+
+                                Título de la noticia.
+                            -->
+
+                            <p>
+
+                                [TÍTULO DE LA NOTICIA]
+
+                            </p>
+
+
+
+                            <!--
+                                RELLENAR IMAGEN:
+
+                                Cambiar la ruta por vuestra imagen.
+
+                                EJEMPLO:
+                                IMG/noticias/noticia1.jpg
+                            -->
+
+                            <img
+                                src="IMG/noticias/noticia1.jpg"
+                                alt="Imagen de la noticia"
+                                class="noticia"
+                            >
+
+
+
+                            <!--
+                                OPCIONAL:
+
+                                Comentario pequeño
+                                sobre la noticia.
+                            -->
+
+                            <p>
+
+                                [COMENTARIO SOBRE LA NOTICIA]
+
+                            </p>
+
+
+                        </section>
+
+                    </div>
+
+
+
+                    <!-- ========================================= -->
+                    <!-- FOTOS DEL GRUPO                           -->
+                    <!-- ========================================= -->
+
+                    <div class="col-md-6">
+
+                        <section class="bloque">
+
+
+                            <h3>
+
+                                📷 Fotos del grupo
+
+                            </h3>
+
+
+
+                            <!--
+                                RELLENAR:
+
+                                Cambiar estas rutas
+                                por fotografías reales.
+                            -->
+
+                            <img
+                                src="IMG/integrantes/foto1.jpg"
+                                alt="Foto del grupo"
+                                class="foto"
+                            >
+
+
+                            <img
+                                src="IMG/integrantes/foto2.jpg"
+                                alt="Foto del grupo"
+                                class="foto"
+                            >
+
+
+                            <img
+                                src="IMG/integrantes/foto3.jpg"
+                                alt="Foto del grupo"
+                                class="foto"
+                            >
+
+
+                        </section>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- INTEGRANTES / SCROLL                     -->
+            <!-- ========================================= -->
+
+            <section class="integrantes">
+
+
+
+                <!-- INTEGRANTE 1 -->
+
+                <a
+                    href="Pages/integrantes.html"
+                    class="integrante"
+                >
+
+
+                    <img
+                        src="IMG/integrantes/integrante1.jpg"
+                        alt="Integrante 1"
+                        class="mini-avatar"
+                    >
+
+
+                    [NOMBRE 1]
+
+
+                </a>
+
+
+
+                <!-- INTEGRANTE 2 -->
+
+                <a
+                    href="Pages/integrantes.html"
+                    class="integrante"
+                >
+
+
+                    <img
+                        src="IMG/integrantes/integrante2.jpg"
+                        alt="Integrante 2"
+                        class="mini-avatar"
+                    >
+
+
+                    [NOMBRE 2]
+
+
+                </a>
+
+
+
+                <!-- INTEGRANTE 3 -->
+
+                <a
+                    href="Pages/integrantes.html"
+                    class="integrante"
+                >
+
+
+                    <img
+                        src="IMG/integrantes/integrante3.jpg"
+                        alt="Integrante 3"
+                        class="mini-avatar"
+                    >
+
+
+                    [NOMBRE 3]
+
+
+                </a>
+
+
+
+                <!-- INTEGRANTE 4 -->
+
+                <a
+                    href="Pages/integrantes.html"
+                    class="integrante"
+                >
+
+
+                    <img
+                        src="IMG/integrantes/integrante4.jpg"
+                        alt="Integrante 4"
+                        class="mini-avatar"
+                    >
+
+
+                    [NOMBRE 4]
+
+
+                </a>
+
+
+
+                <!-- INTEGRANTE 5 -->
+
+                <a
+                    href="Pages/integrantes.html"
+                    class="integrante"
+                >
+
+
+                    <img
+                        src="IMG/integrantes/integrante5.jpg"
+                        alt="Integrante 5"
+                        class="mini-avatar"
+                    >
+
+
+                    [NOMBRE 5]
+
+
+                </a>
+
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- ========================================= -->
+        <!-- COLUMNA DERECHA                           -->
+        <!-- ========================================= -->
+
+        <aside class="col-lg-3 derecha">
+
+
+
+            <!-- ========================================= -->
+            <!-- ACTIVIDADES PRÓXIMAS                     -->
+            <!-- ========================================= -->
+
+            <section class="caja-derecha">
+
+
+                <h3>
+
+                    ⏰ Actividades próximas
+
+                </h3>
+
+
+
+                <!--
+                    RELLENAR:
+
+                    Actividad + fecha/hora.
+                -->
+
+                <div class="actividad">
+
+
+                    [ACTIVIDAD 1]
+
+
+                    <br>
+
+
+                    <small>
+
+                        [FECHA / HORA]
+
+                    </small>
+
+
+                </div>
+
+
+
+                <div class="actividad">
+
+
+                    [ACTIVIDAD 2]
+
+
+                    <br>
+
+
+                    <small>
+
+                        [FECHA / HORA]
+
+                    </small>
+
+
+                </div>
+
+
+
+                <div class="actividad">
+
+
+                    [ACTIVIDAD 3]
+
+
+                    <br>
+
+
+                    <small>
+
+                        [FECHA / HORA]
+
+                    </small>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- CANCIÓN DEL DÍA                          -->
+            <!-- ========================================= -->
+
+            <section class="caja-derecha cancion">
+
+
+                <h3>
+
+                    🎵 Canción del día
+
+                </h3>
+
+
+
+                <!--
+                    RELLENAR:
+
+                    Nombre de canción
+                    y artista.
+                -->
+
+                <p>
+
+                    [NOMBRE DE LA CANCIÓN] - [ARTISTA]
+
+                </p>
+
+
+
+                <!--
+                    RELLENAR URL:
+
+                    Sustituir # por
+                    el enlace real de YouTube.
+
+                    EJEMPLO:
+                    href="https://www.youtube.com/..."
+                -->
+
+                <a
+                    href="#"
+                    target="_blank"
+                >
+
+                    ▶️ Escuchar en YouTube
+
+                </a>
+
+
+            </section>
+
+
+        </aside>
+
+
+    </div>
 
 </div>
+
+
+
 <!-- ========================================= -->
-<!-- FEED / MENSAJES DEL GRUPO                 -->
-<!-- ========================================= -->
-
-<section class="feed">
-
-    <h3>
-        💬 Feed del grupo
-    </h3>
-
-
-    <!--
-        RELLENAR:
-        Nombre de la persona + mensaje.
-    -->
-
-    <div class="comentario">
-
-        <strong>
-            [NOMBRE]:
-        </strong>
-
-        [ESCRIBIR MENSAJE]
-
-    </div>
-
-
-    <div class="comentario">
-
-        <strong>
-            [NOMBRE]:
-        </strong>
-
-        [ESCRIBIR MENSAJE]
-
-    </div>
-
-
-    <!-- Esta caja simula escribir un comentario -->
-
-    <div class="comentario">
-
-        💬 Escribir comentario...
-
-    </div>
-
-</section>
-<!-- ========================================= -->
-<!-- NOTICIA DEL DÍA / SEMANA                  -->
+<!-- JAVASCRIPT DE BOOTSTRAP                   -->
+<!-- Necesario para el desplegable              -->
 <!-- ========================================= -->
 
-<section class="bloque">
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
-    <h3>
-        📰 Noticias
-    </h3>
 
+</body>
 
-    <!--
-        RELLENAR:
-        Poner aquí el título de la noticia.
-    -->
-
-    <p>
-
-        [TÍTULO DE LA NOTICIA]
-
-    </p>
-
-
-    <!--
-        RELLENAR IMAGEN:
-
-        Cambiar la ruta por la imagen
-        correspondiente a la noticia.
-
-        EJEMPLO:
-        IMG/noticias/noticia1.jpg
-    -->
-
-    <img
-        src="IMG/noticias/noticia1.jpg"
-        alt="Imagen de la noticia"
-        style="width:100%; border-radius:12px;"
-    >
-
-
-    <!--
-        OPCIONAL:
-        Aquí podéis poner un comentario
-        pequeño sobre la noticia.
-    -->
-
-    <p>
-
-        [COMENTARIO SOBRE LA NOTICIA]
-
-    </p>
-
-</section>
-<!-- ========================================= -->
-<!-- FOTOS DEL GRUPO                          -->
-<!-- ========================================= -->
-
-<section class="bloque">
-
-    <h3>
-        📷 Fotos del grupo
-    </h3>
-
-
-    <!--
-        RELLENAR:
-        Cambiar las rutas por fotografías reales.
-
-        Las fotos podrían guardarse en:
-        IMG/integrantes/
-        o en una futura carpeta IMG/grupo/
-    -->
-
-
-    <img
-        src="IMG/integrantes/foto1.jpg"
-        alt="Foto del grupo"
-        class="foto"
-    >
-
-
-    <img
-        src="IMG/integrantes/foto2.jpg"
-        alt="Foto del grupo"
-        class="foto"
-    >
-
-
-    <img
-        src="IMG/integrantes/foto3.jpg"
-        alt="Foto del grupo"
-        class="foto"
-    >
-
-</section>
-<!-- ========================================= -->
-<!-- ACTIVIDADES PRÓXIMAS                     -->
-<!-- ========================================= -->
-
-<section class="caja-derecha">
-
-    <h3>
-        ⏰ Actividades próximas
-    </h3>
-
-
-    <!--
-        RELLENAR:
-        Nombre de actividad + fecha/hora.
-    -->
-
-    <div class="actividad">
-
-        [ACTIVIDAD 1]
-
-        <br>
-
-        <small>
-            [FECHA / HORA]
-        </small>
-
-    </div>
-
-
-    <div class="actividad">
-
-        [ACTIVIDAD 2]
-
-        <br>
-
-        <small>
-            [FECHA / HORA]
-        </small>
-
-    </div>
-
-
-    <div class="actividad">
-
-        [ACTIVIDAD 3]
-
-        <br>
-
-        <small>
-            [FECHA / HORA]
-        </small>
-
-    </div>
-
-</section>
-<!-- ========================================= -->
-<!-- CANCIÓN DEL DÍA                          -->
-<!-- ========================================= -->
-
-<section class="caja-derecha cancion">
-
-    <h3>
-        🎵 Canción del día
-    </h3>
-
-
-    <!--
-        RELLENAR:
-        Nombre de la canción y artista.
-    -->
-
-    <p>
-
-        [NOMBRE DE LA CANCIÓN] - [ARTISTA]
-
-    </p>
-
-
-    <!--
-        RELLENAR URL:
-
-        Sustituir el # por el enlace
-        de YouTube de la canción.
-
-        EJEMPLO:
-        href="https://www.youtube.com/..."
-    -->
-
-    <a
-        href="#"
-        target="_blank"
-    >
-
-        ▶️ Escuchar en YouTube
-
-    </a>
-
-</section>
-<!-- ========================================= -->
-<!-- INTEGRANTES                              -->
-<!-- ========================================= -->
-
-<section class="integrantes">
-
-
-    <!-- INTEGRANTE 1 -->
-
-    <a href="Pages/integrantes.html" class="integrante">
-
-        <!--
-            Cambiar imagen y nombre.
-        -->
-
-        <img
-            src="IMG/integrantes/integrante1.jpg"
-            alt="Integrante 1"
-            class="mini-avatar"
-        >
-
-        [NOMBRE 1]
-
-    </a>
-
-
-    <!-- INTEGRANTE 2 -->
-
-    <a href="Pages/integrantes.html" class="integrante">
-
-        <img
-            src="IMG/integrantes/integrante2.jpg"
-            alt="Integrante 2"
-            class="mini-avatar"
-        >
-
-        [NOMBRE 2]
-
-    </a>
-
-
-    <!-- INTEGRANTE 3 -->
-
-    <a href="Pages/integrantes.html" class="integrante">
-
-        <img
-            src="IMG/integrantes/integrante3.jpg"
-            alt="Integrante 3"
-            class="mini-avatar"
-        >
-
-        [NOMBRE 3]
-
-    </a>
-
-
-    <!-- INTEGRANTE 4 -->
-
-    <a href="Pages/integrantes.html" class="integrante">
-
-        <img
-            src="IMG/integrantes/integrante4.jpg"
-            alt="Integrante 4"
-            class="mini-avatar"
-        >
-
-        [NOMBRE 4]
-
-    </a>
-
-
-    <!-- INTEGRANTE 5 -->
-
-    <a href="Pages/integrantes.html" class="integrante">
-
-        <img
-            src="IMG/integrantes/integrante5.jpg"
-            alt="Integrante 5"
-            class="mini-avatar"
-        >
-
-        [NOMBRE 5]
-
-    </a>
-
-
-</section>
+</html>
