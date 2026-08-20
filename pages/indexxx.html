@@ -27,6 +27,24 @@
 
     <link rel="stylesheet" href="../css/styles.css">
 
+<style>
+    .integrantes {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: nowrap;
+    }
+    .integrante {
+        flex: 1;
+        min-width: 0;
+        padding: 20px 10px;
+    }
+    .mini-avatar {
+        width: 70px;
+        height: 70px;
+    }
+</style>
+
 </head>
 
 
@@ -569,114 +587,35 @@
 
 
 
-                <!-- INTEGRANTE 1 -->
+               <!-- INTEGRANTE 1 -->
+<a href="perfiles/perfil-james.html" class="integrante">
+    <img src="../img/integrantes/integrante1.jpg" alt="James Thomas Honeyman Gómez" class="mini-avatar">
+    James
+</a>
 
-                <a
-                    href="Pages/integrantes.html"
-                    class="integrante"
-                >
+<!-- INTEGRANTE 2 -->
+<a href="perfiles/perfil-isidora.html" class="integrante">
+    <img src="../img/integrantes/integrante2.jpg" alt="Isidora Constanza Fernández Barrios" class="mini-avatar">
+    Isidora
+</a>
 
+<!-- INTEGRANTE 3 -->
+<a href="perfiles/perfil-carlos.html" class="integrante">
+    <img src="../img/integrantes/integrante3.jpg" alt="Carlos Eduardo López Andrade" class="mini-avatar">
+    Carlos
+</a>
 
-                    <img
-                        src="IMG/integrantes/integrante1.jpg"
-                        alt="Integrante 1"
-                        class="mini-avatar"
-                    >
+<!-- INTEGRANTE 4 -->
+<a href="perfiles/perfil-alejandra.html" class="integrante">
+    <img src="../img/integrantes/integrante4.jpg" alt="Alejandra Martín Pinelo" class="mini-avatar">
+    Alejandra
+</a>
 
-
-                    [NOMBRE 1]
-
-
-                </a>
-
-
-
-                <!-- INTEGRANTE 2 -->
-
-                <a
-                    href="Pages/integrantes.html"
-                    class="integrante"
-                >
-
-
-                    <img
-                        src="IMG/integrantes/integrante2.jpg"
-                        alt="Integrante 2"
-                        class="mini-avatar"
-                    >
-
-
-                    [NOMBRE 2]
-
-
-                </a>
-
-
-
-                <!-- INTEGRANTE 3 -->
-
-                <a
-                    href="Pages/integrantes.html"
-                    class="integrante"
-                >
-
-
-                    <img
-                        src="IMG/integrantes/integrante3.jpg"
-                        alt="Integrante 3"
-                        class="mini-avatar"
-                    >
-
-
-                    [NOMBRE 3]
-
-
-                </a>
-
-
-
-                <!-- INTEGRANTE 4 -->
-
-                <a
-                    href="Pages/integrantes.html"
-                    class="integrante"
-                >
-
-
-                    <img
-                        src="IMG/integrantes/integrante4.jpg"
-                        alt="Integrante 4"
-                        class="mini-avatar"
-                    >
-
-
-                    [NOMBRE 4]
-
-
-                </a>
-
-
-
-                <!-- INTEGRANTE 5 -->
-
-                <a
-                    href="Pages/integrantes.html"
-                    class="integrante"
-                >
-
-
-                    <img
-                        src="IMG/integrantes/integrante5.jpg"
-                        alt="Integrante 5"
-                        class="mini-avatar"
-                    >
-
-
-                    [NOMBRE 5]
-
-
-                </a>
-
+<!-- INTEGRANTE 5 -->
+<a href="perfiles/perfil-valentina.html" class="integrante">
+    <img src="../img/integrantes/integrante5.jpg" alt="Valentina Arlett Arcas Molina" class="mini-avatar">
+    Valentina
+</a>
 
             </section>
 
@@ -838,11 +777,38 @@
     // Al cargar la página, muestra la última canción guardada (si existe)
     window.addEventListener('DOMContentLoaded', () => {
         const guardada = localStorage.getItem('cancionDelDia');
-        if (guardada) mostrarCancion(guardada);
+                if (guardada) mostrarCancion(guardada);
     });
 </script>
+</section>
 
-        </aside>
+<section class="bloque">
+    <h3>🛠️ Tecnologías utilizadas</h3>
+    <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:center;">
+        <div style="text-align:center; width:70px;">
+            <img src="../img/tecnologias/html.png" alt="HTML" style="width:50px; height:50px; object-fit:contain;">
+            <p style="font-size:12px; margin:4px 0 0;">HTML</p>
+        </div>
+        <div style="text-align:center; width:70px;">
+            <img src="../img/tecnologias/css.png" alt="CSS" style="width:50px; height:50px; object-fit:contain;">
+            <p style="font-size:12px; margin:4px 0 0;">CSS</p>
+        </div>
+        <div style="text-align:center; width:70px;">
+            <img src="../img/tecnologias/bootstrap.png" alt="Bootstrap" style="width:50px; height:50px; object-fit:contain;">
+            <p style="font-size:12px; margin:4px 0 0;">Bootstrap</p>
+        </div>
+        <div style="text-align:center; width:70px;">
+            <img src="../img/tecnologias/docker.png" alt="Docker" style="width:50px; height:50px; object-fit:contain;">
+            <p style="font-size:12px; margin:4px 0 0;">Docker</p>
+        </div>
+        <div style="text-align:center; width:70px;">
+            <img src="../img/tecnologias/nginx.png" alt="Nginx" style="width:50px; height:50px; object-fit:contain;">
+            <p style="font-size:12px; margin:4px 0 0;">Nginx</p>
+        </div>
+    </div>
+</section>
+
+</aside>
 
 
     </div>
