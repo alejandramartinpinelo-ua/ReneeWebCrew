@@ -781,54 +781,66 @@
             <!-- CANCIÓN DEL DÍA                          -->
             <!-- ========================================= -->
 
-            <section class="caja-derecha cancion">
+       <section class="caja-derecha cancion">
+    <h3>🎵 Canción del día</h3>
 
+    <div id="spotify-embed-container">
+        <p style="font-size:13px; color:#777;">Aún no se ha elegido canción</p>
+    </div>
 
-                <h3>
+    <input
+        type="text"
+        id="spotify-link-input"
+        placeholder="Pega aquí el link de Spotify..."
+        style="width:100%; padding:6px; margin-top:8px; border-radius:8px; border:1px solid #ccc;"
+    >
 
-                    🎵 Canción del día
+    <button
+        onclick="actualizarCancion()"
+        style="width:100%; margin-top:6px; padding:6px; border-radius:8px; background-color:#1DB954; color:white; border:none; cursor:pointer;"
+    >
+        🎧 Actualizar canción
+    </button>
+</section>
 
-                </h3>
+<script>
+    function actualizarCancion() {
+        const input = document.getElementById('spotify-link-input').value;
+        const match = input.match(/track\/([a-zA-Z0-9]+)/);
 
+        if (!match) {
+            alert('Pega un link válido de Spotify (ej: https://open.spotify.com/track/...)');
+            return;
+        }
 
+        const trackId = match[1];
+        mostrarCancion(trackId);
+        localStorage.setItem('cancionDelDia', trackId);
+        document.getElementById('spotify-link-input').value = '';
+    }
 
-                <!--
-                    RELLENAR:
+    function mostrarCancion(trackId) {
+        const contenedor = document.getElementById('spotify-embed-container');
+        contenedor.innerHTML = `
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy">
+            </iframe>
+        `;
+    }
 
-                    Nombre de canción
-                    y artista.
-                -->
-
-                <p>
-
-                    [NOMBRE DE LA CANCIÓN] - [ARTISTA]
-
-                </p>
-
-
-
-                <!--
-                    RELLENAR URL:
-
-                    Sustituir # por
-                    el enlace real de YouTube.
-
-                    EJEMPLO:
-                    href="https://www.youtube.com/..."
-                -->
-
-                <a
-                    href="#"
-                    target="_blank"
-                >
-
-                    ▶️ Escuchar en YouTube
-
-                </a>
-
-
-            </section>
-
+    // Al cargar la página, muestra la última canción guardada (si existe)
+    window.addEventListener('DOMContentLoaded', () => {
+        const guardada = localStorage.getItem('cancionDelDia');
+        if (guardada) mostrarCancion(guardada);
+    });
+</script>
 
         </aside>
 
