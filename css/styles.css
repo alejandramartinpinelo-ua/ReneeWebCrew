@@ -213,3 +213,82 @@ body {
         margin-top: 20px;
     }
 }
+
+
+/* ============================= */
+/* PÁGINA DE INTEGRANTES */
+/* ============================= */
+
+
+/* Contenido principal */
+
+.pagina-integrantes {
+    padding: 30px;
+}
+
+
+/* Contenedor de las tarjetas */
+
+.tarjetas-integrantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* Tarjeta de cada integrante */
+
+.tarjeta {
+    height: 100%;
+    background-color: #F8F0D7;
+    border: 2px solid var(--sage);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Fotografía del integrante */
+
+.imagen-integrante {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+/* Información del integrante */
+
+.informacion-integrante h2 {
+    font-size: 22px;
+}
+
+
+/* Botón para volver al inicio */
+
+.volver-inicio {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.volver {
+    display: inline-block;
+    background-color: var(--forest);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+/* Adaptación para celulares */
+
+@media (max-width: 768px) {
+
+    .tarjetas-integrantes {
+        grid-template-columns: 1fr;
+    }
+
+}
