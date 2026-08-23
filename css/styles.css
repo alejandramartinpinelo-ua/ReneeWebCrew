@@ -292,3 +292,43 @@ body {
     }
 
 }
+
+/* Lista de lenguajes */
+
+.lista-lenguajes {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-lenguajes li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lista-lenguajes img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Lista de bases de datos */
+
+.lista-bases-datos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-bases-datos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lista-bases-datos img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
