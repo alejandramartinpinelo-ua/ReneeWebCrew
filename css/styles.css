@@ -332,3 +332,128 @@ body {
     height: 35px;
     object-fit: contain;
 }
+
+
+/* ========================================= */
+/* PÁGINA ETIQUETAS SEMÁNTICAS              */
+/* ========================================= */
+
+
+/* Fondo de la página */
+
+.pagina-semantica-body {
+    background-color: #F5EAC5;
+}
+
+
+/* Encabezado */
+
+.encabezado-semantica {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--sage);
+    color: var(--forest);
+}
+
+.encabezado-semantica h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Navegación */
+
+.navegacion-semantica {
+    text-align: center;
+    padding: 15px;
+}
+
+.navegacion-semantica a {
+    margin: 5px;
+}
+
+
+/* Contenido principal */
+
+.pagina-semantica {
+    max-width: 1000px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+/* Bloques */
+
+.bloque-semantico {
+    background-color: #F8F0D7;
+    border: 2px solid var(--sage);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Títulos */
+
+.bloque-semantico h2 {
+    color: var(--forest);
+    margin-bottom: 15px;
+}
+
+
+/* Código HTML */
+
+.codigo-ejemplo {
+    background-color: #2B2B2B;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+
+/* Tabla */
+
+.pagina-semantica table {
+    background-color: white;
+}
+
+
+/* Botón volver */
+
+.volver-semantica {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* Pie de página */
+
+.footer-semantica {
+    text-align: center;
+    background-color: var(--forest);
+    color: white;
+    padding: 20px;
+}
+
+.footer-semantica p {
+    margin: 0;
+}
+
+
+/* Adaptación para celulares */
+
+@media (max-width: 768px) {
+
+    .encabezado-semantica {
+        padding: 20px 15px;
+    }
+
+    .encabezado-semantica h1 {
+        font-size: 28px;
+    }
+
+    .bloque-semantico {
+        padding: 15px;
+    }
+
+}
