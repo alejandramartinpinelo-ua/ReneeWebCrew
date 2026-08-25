@@ -457,3 +457,169 @@ body {
     }
 
 }
+
+
+/* ========================================= */
+/* PÁGINA INVESTIGACIÓN CSS                 */
+/* ========================================= */
+
+
+/* Fondo */
+
+.pagina-css-body {
+    background-color: #F5EAC5;
+}
+
+
+/* Contenido */
+
+.contenido-css {
+    padding: 30px;
+}
+
+
+/* Encabezado */
+
+.encabezado-css {
+    background-color: var(--sage);
+    color: var(--forest);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+/* Bloques de información */
+
+.bloque-css {
+    background-color: #F8F0D7;
+
+    border: 2px solid var(--sage);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Títulos */
+
+.bloque-css h2 {
+    color: var(--forest);
+
+    margin-bottom: 15px;
+}
+
+
+.bloque-css h3 {
+    color: var(--brown);
+
+    font-size: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* Ejemplos de código */
+
+.codigo-css {
+    background-color: #2B2B2B;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+}
+
+
+/* ========================================= */
+/* MODELO DE CAJA                           */
+/* ========================================= */
+
+.modelo-caja {
+    max-width: 500px;
+
+    margin: 25px auto;
+
+    text-align: center;
+}
+
+
+.caja-margin {
+    background-color: #D8C27A;
+
+    padding: 25px;
+
+    border-radius: 10px;
+}
+
+
+.caja-border {
+    background-color: var(--forest);
+
+    color: white;
+
+    padding: 20px;
+}
+
+
+.caja-padding {
+    background-color: var(--sage);
+
+    color: var(--forest);
+
+    padding: 20px;
+}
+
+
+.caja-contenido {
+    background-color: white;
+
+    color: black;
+
+    padding: 20px;
+}
+
+
+/* Botón volver */
+
+.volver-css {
+    text-align: center;
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================= */
+/* ADAPTACIÓN PARA CELULARES                */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    .contenido-css {
+        padding: 15px;
+    }
+
+
+    .encabezado-css h1 {
+        font-size: 28px;
+    }
+
+
+    .bloque-css {
+        padding: 15px;
+    }
+
+}
