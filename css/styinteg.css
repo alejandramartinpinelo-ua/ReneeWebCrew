@@ -1,0 +1,212 @@
+/* ============================= */
+/* ESTILOS GENERALES             */
+/* ============================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+    color: #3F4735;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 25%,
+            rgba(195, 162, 75, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(64, 85, 46, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            rgba(244, 241, 232, 0.70),
+            rgba(244, 241, 232, 0.70)
+        ),
+        url("../img/fondoint.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ============================= */
+/* CABECERA                      */
+/* ============================= */
+
+.cabecera-integrantes {
+    text-align: center;
+
+    padding: 35px 20px 10px;
+}
+
+.cabecera-integrantes h1 {
+    margin: 0;
+
+    font-size: 42px;
+
+    color: #40552E;
+
+    letter-spacing: 1px;
+}
+
+.simbolo-titulo {
+    margin: 0 0 5px;
+
+    font-size: 24px;
+
+    color: #E6A23C;
+
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 0 6px rgba(230, 162, 60, 0.55),
+        0 0 14px rgba(195, 162, 75, 0.35);
+}
+
+.subtitulo-integrantes {
+    margin-top: 10px;
+
+    font-size: 16px;
+
+    color: #6C7457;
+
+    font-style: italic;
+}
+
+.avatar-miembro {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #C3A24B;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.logo-equipo {
+    width: 170px;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #C3A24B;
+}
+.zona-equipo {
+    position: relative;
+
+    width: 800px;
+    height: 600px;
+
+    margin: 20px auto 40px;
+}
+.centro-equipo {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+.centro-equipo h2 {
+    margin: 10px 0 2px;
+
+    color: #40552E;
+
+    font-size: 24px;
+}
+
+.centro-equipo p {
+    margin: 0;
+
+    color: #C3A24B;
+
+    font-style: italic;
+}
+.miembro {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #40552E;
+
+    font-weight: bold;
+
+    gap: 8px;
+
+    transition: transform 0.3s ease;
+}
+.miembro-1 {
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.miembro-2 {
+    top: 25%;
+    right: 8%;
+}
+
+.miembro-3 {
+    bottom: 5%;
+    right: 22%;
+}
+
+.miembro-4 {
+    bottom: 5%;
+    left: 22%;
+}
+
+.miembro-5 {
+    top: 25%;
+    left: 8%;
+}
+
+.miembro:hover .avatar-miembro {
+    transform: scale(1.08);
+
+    border-color: #8E943C;
+
+    box-shadow: 0 8px 20px rgba(63, 71, 53, 0.25);
+}
+.volver-inicio {
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    padding: 10px 22px;
+
+    background-color: #40552E;
+
+    color: #F4F1E8;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.volver-inicio:hover {
+    background-color: #C3A24B;
+
+    transform: translateY(-2px);
+}
