@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReneeWebCrew | Reflexión</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- ========================================= -->
+        <!-- BARRA LATERAL                             -->
+        <!-- ========================================= -->
+        <aside class="col-lg-2 barra-lateral">
+
+            <img src="../img/logo.png" alt="Logo de ReneeWebCrew" class="avatar">
+
+            <h2>ReneeWebCrew</h2>
+
+            <nav class="menu">
+                <a href="/index.html">🏠 Inicio</a>
+                <a href="integrantes.html">👥 Integrantes</a>
+                <a href="investigacion.html">🔬 Investigación</a>
+            </nav>
+
+        </aside>
+
+        <!-- ========================================= -->
+        <!-- CONTENIDO PRINCIPAL                       -->
+        <!-- ========================================= -->
+        <main class="col-lg-10 contenido">
+
+            <header class="superior">
+                <div class="caja-superior">
+                    💭 Reflexión y trabajo colaborativo
+                </div>
+            </header>
+
+            <section class="panel">
+
+                <!-- 1. Integrantes y responsabilidades -->
+                <section class="bloque">
+                    <h3>👥 Integrantes y responsabilidades asignadas</h3>
+                    <ul>
+                        <li><strong>James Thomas Honeyman Gómez:</strong> Encargado de la investigación de HTML y CSS, junto con la configuración del despliegue en Docker y Nginx.</li>
+                        <li><strong>Isidora Constanza Fernández Barrios:</strong> Gestiona la distribución de tareas y apoya en la investigación técnico-operativa.</li>
+                        <li><strong>Carlos Eduardo López Andrade:</strong> Se ocupa de la reestructuración del menú de navegación y optimización del diseño visual.</li>
+                        <li><strong>Alejandra Martín Pinelo:</strong> Define la línea gráfica del proyecto y estandariza los estilos globales en CSS.</li>
+                        <li><strong>Valentina Arlett Arcas Molina:</strong> Responsable de la actualización de contenidos, mantenimiento general y aplicación de modificaciones según los requerimientos del grupo.</li>
+                    </ul>
+                </section>
+
+                <!-- 2. Herramientas de coordinación -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>🛠️ Herramientas utilizadas para coordinar el trabajo</h3>
+                    <p>Para la gestión y desarrollo del proyecto, el equipo utilizó un ecosistema de herramientas digitales enfocadas en la comunicación fluida y el control de versiones:</p>
+                    <ul>
+                        <li><strong>GitHub:</strong> Utilizado para el control de versiones del código fuente, permitiendo integrar cambios, gestionar ramas de trabajo y mantener un registro claro del avance del proyecto.</li>
+                        <li><strong>WhatsApp:</strong> Canal principal para la comunicación diaria, resolución rápida de dudas y avisos operativos inmediatos.</li>
+                        <li><strong>Discord:</strong> Plataforma empleada para reuniones virtuales, sesiones de trabajo colaborativo en vivo y coordinación de tareas mediante la pantalla compartida.</li>
+                    </ul>
+                </section>
+
+                <!-- 3. Dificultades -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>⚠️ Dificultades encontradas durante el desarrollo</h3>
+                    <p>Durante el transcurso del proyecto, el equipo enfrentó diversos desafíos técnicos y de coordinación que pusieron a prueba nuestra capacidad de resolución de problemas:</p>
+                    <ul>
+                        <li><strong>Conflictos al fusionar ramas en Git:</strong> Al trabajar simultáneamente en diferentes secciones del código, se generaron conflictos al intentar integrar las ramas en el repositorio principal de GitHub.</li>
+                        <li><strong>Incompatibilidad de rutas de archivos:</strong> Se presentaron fallas al cargar archivos estáticos (imágenes, hojas de estilo) debido al uso de rutas absolutas o diferencias en el manejo de mayúsculas y minúsculas entre los sistemas operativos de los integrantes y el entorno del contenedor.</li>
+                        <li><strong>Coordinación de tareas y trabajo en paralelo:</strong> Sincronizar el ritmo de avance de cada integrante para evitar sobreposición de trabajo o esperas innecesarias antes de integrar avances.</li>
+                    </ul>
+                </section>
+
+                <!-- 4. Soluciones -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>✅ Soluciones aplicadas</h3>
+                    <ul>
+                        <li><strong>Flujo de trabajo estructurado en Git:</strong> Establecimos la convención de trabajar en ramas individuales y realizar revisiones de código y resoluciones de conflictos en conjunto mediante llamadas en Discord.</li>
+                        <li><strong>Estandarización de rutas relativas:</strong> Revisamos y corregimos la estructura de carpetas para utilizar exclusivamente rutas relativas en el HTML y CSS, asegurando que los recursos se cargaran correctamente.</li>
+                        <li><strong>Comunicación continua y reasignación de tareas:</strong> Utilizamos WhatsApp y Discord para mantener actualizado el estado del trabajo de cada uno, aclarando dudas al instante y dividiendo las tareas en módulos independientes para optimizar el desarrollo en paralelo.</li>
+                    </ul>
+                </section>
+
+                <!-- 5. Aprendizajes -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>📚 Aprendizajes sobre HTML, CSS, Bootstrap, Docker y Nginx</h3>
+                    <ul>
+                        <li><strong>HTML:</strong> Estructuración semántica limpia para guiar la maquetación y jerarquía de contenidos.</li>
+                        <li><strong>CSS y Bootstrap:</strong> Aprendimos a diseñar interfaces atractivas y adaptables a distintos dispositivos (responsive design) utilizando el sistema de grillas, utilidades y componentes prediseñados de Bootstrap, complementados con reglas CSS personalizadas.</li>
+                        <li><strong>Docker:</strong> Experimentamos con la virtualización a nivel de sistema operativo, aprendiendo a crear imágenes ligeras mediante Dockerfile y a ejecutar el proyecto dentro de contenedores aislados para garantizar un entorno de ejecución uniforme.</li>
+                        <li><strong>Nginx:</strong> Entendimos el rol de un servidor web eficiente para procesar peticiones HTTP, entregar los archivos estáticos de la aplicación (HTML/CSS/JS) y gestionar de manera optimizada el tráfico del sitio dentro de la arquitectura con Docker.</li>
+                    </ul>
+                </section>
+
+                <!-- 6. Importancia de la colaboración -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>🤝 Importancia de la colaboración y organización del equipo</h3>
+                    <p>La colaboración activa y la buena organización fueron fundamentales para el éxito de este proyecto. A lo largo del proceso surgieron diversas dificultades y desafíos técnicos; sin embargo, mediante la aclaración oportuna de la información y una coordinación fluida entre todos, logramos resolver cada inconveniente de manera efectiva. Mantener una comunicación constante nos permitió superar los bloqueos a tiempo, evitar la duplicación de esfuerzos y asegurar que cada miembro aportara según sus fortalezas. Asimismo, definir responsabilidades claras desde el principio facilitó el cumplimiento de las entregas en las fechas estimadas, demostrando que una buena coordinación entre los desarrolladores impacta directamente en la calidad y estabilidad del producto final.</p>
+                </section>
+
+                <!-- 7. Reflexión individual -->
+                <section class="bloque" style="margin-top:16px;">
+                    <h3>💬 Reflexión individual de cada integrante</h3>
+
+                    <p><strong>James:</strong> El desarrollo de esta plataforma web, integrando herramientas como HTML, CSS, Docker y Nginx, representó un desafío tanto técnico como personal. Durante el proceso surgieron obstáculos complejos que pusieron a prueba nuestra perseverancia, pero que me dejaron una enseñanza fundamental: nadie debe enfrentar los problemas solo. El respaldo constante del equipo de trabajo fue clave para resolver los conflictos de implementación, mantener la confianza y no decaer. Esta experiencia me demostró que el éxito, la paz y el aprendizaje en un proyecto de ingeniería no solo dependen del código, sino de la capacidad de colaborar y apoyarnos mutuamente para avanzar.</p>
+                    <p><strong>Isidora:</strong> Durante este proyecto aprendí mucho sobre cómo estructurar una página web y usar herramientas como Docker que no conocía bien. Aunque al principio nos costaron algunas partes técnicas, me sirvió bastante para ganar confianza, trabajar en equipo y saber cómo resolver fallas sobre la marcha.</p>
+                    <p><strong>Carlos:</strong> Como reflexión personal, el desarrollo de este laboratorio me permitió reforzar mis conocimientos en las tecnologías vistas, como HTML, CSS y Bootstrap, además de comprender mejor el trabajo colaborativo mediante GitHub. Mi participación también me ayudó a entender cómo se construye una página web desde su estructura base, con herramientas como Docker y Nginx, organizando correctamente los elementos, estilo y navegación. Por otro lado, pude valorar la importancia de coordinar los cambios con el equipo para mantener un proyecto ordenado y funcional.</p>
+                    <p><strong>Alejandra:</strong> Fue una experiencia muy linda y colaborativa. Me sentí súper realizada al ver el resultado final, especialmente por todo lo que aprendí sobre diferentes herramientas y estilos de trabajo. Aunque por momentos fue complicado, al final fue un proceso súper práctico y enriquecedor para todos.</p>
+                    <p><strong>Valentina:</strong> Participar en este proyecto me permitió aprender a usar Git y GitHub más allá de la teoría: entender cómo se resuelven conflictos reales cuando varias personas editan los mismos archivos, y por qué es tan importante avisar al equipo antes de hacer cambios grandes. También reforcé conceptos de HTML, CSS y Bootstrap al construir la página principal y adaptar el diseño a un estilo coherente en todo el sitio. Más allá de lo técnico, aprendí que la comunicación constante con el equipo evita muchos problemas que la tecnología sola no puede resolver.</p>
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
