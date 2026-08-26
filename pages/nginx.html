@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nginx y publicación del sitio | ReneeWebCrew</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+    <!-- CSS de investigación -->
+    <link rel="stylesheet" href="../css/estilopersonal.css">
+
+</head>
+
+
+<body class="perfil">
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+
+        <!-- ========================================= -->
+        <!-- BARRA LATERAL                            -->
+        <!-- ========================================= -->
+
+        <aside class="col-lg-2 barra-lateral">
+
+
+            <a href="indexxx.html">
+
+                <img
+                    src="../img/logo.png"
+                    alt="Logo ReneeWebCrew"
+                    class="avatar"
+                >
+
+            </a>
+
+
+            <h2>
+                ReneeWebCrew
+            </h2>
+
+
+            <p class="bio">
+
+                Equipo de estudiantes de Ingeniería Civil Informática
+                de la Universidad Autónoma de Chile.
+
+            </p>
+
+
+            <nav class="menu">
+
+                <a href="indexxx.html">
+                    🏠 Inicio
+                </a>
+
+                <a href="integrantes.html">
+                    👥 Integrantes
+                </a>
+
+                <a href="investigacion.html">
+                    🔬 Investigación
+                </a>
+
+                <a href="contenidos.html">
+                    ⚡ Acceso rápido
+                </a>
+
+                <a href="reflexion.html">
+                    💭 Reflexión
+                </a>
+
+            </nav>
+
+
+        </aside>
+
+
+
+        <!-- ========================================= -->
+        <!-- CONTENIDO PRINCIPAL                      -->
+        <!-- ========================================= -->
+
+        <div class="col-lg-10">
+
+
+            <main class="ficha-perfil">
+
+
+                <!-- ========================================= -->
+                <!-- CABECERA                                 -->
+                <!-- ========================================= -->
+
+                <section class="cabecera-perfil">
+
+
+                    <p class="member-label">
+
+                        ✦ INVESTIGACIÓN // RENEEWEBCREW ✦
+
+                    </p>
+
+
+                    <h1>
+                        🌐 Nginx
+                    </h1>
+
+
+                    <p class="frase-perfil">
+
+                        Publicando nuestro sitio mediante
+                        Docker y Nginx ✦
+
+                    </p>
+
+
+                </section>
+
+
+
+                <!-- ========================================= -->
+                <!-- ¿QUÉ ES NGINX?                           -->
+                <!-- ========================================= -->
+
+                <section class="sobre-mi">
+
+
+                    <h2>
+                        ✦ ¿Qué es Nginx?
+                    </h2>
+
+
+                    <p>
+
+                        Nginx es utilizado en este laboratorio como
+                        <strong>servidor web</strong> para publicar el
+                        sitio ReneeWebCrew dentro de un contenedor Docker.
+
+                    </p>
+
+
+                    <p>
+
+                        Su función dentro del proyecto consiste en recibir
+                        las solicitudes realizadas desde el navegador y
+                        entregar los archivos que forman parte del sitio web.
+
+                    </p>
+
+
+                    <p>
+
+                        En nuestro caso, Docker utiliza la imagen
+                        <code>nginx:alpine</code> como base del contenedor
+                        y copia el archivo HTML al directorio desde donde
+                        Nginx sirve las páginas web.
+
+                    </p>
+
+
+                </section>
+
+
+
+                <!-- ========================================= -->
+                <!-- CONTENIDOS                               -->
+                <!-- ========================================= -->
+
+                <section class="proyectos">
+
+
+                    <h2>
+                        ✦ Construcción y publicación con Nginx
+                    </h2>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- PROPÓSITO                             -->
+                    <!-- ===================================== -->
+
+                    <details open>
+
+
+                        <summary>
+                            Propósito de Nginx en ReneeWebCrew
+                        </summary>
+
+
+                        <p>
+
+                            El propósito de Nginx en este proyecto es actuar
+                            como el servidor web encargado de publicar el
+                            contenido HTML que se encuentra dentro del
+                            contenedor Docker.
+
+                        </p>
+
+
+                        <p>
+
+                            De esta forma, el sitio puede ejecutarse en un
+                            entorno aislado y ser accedido desde el navegador
+                            mediante una dirección local.
+
+                        </p>
+
+
+                        <p>
+
+                            El proceso general utilizado en el laboratorio es:
+
+                        </p>
+
+
+<pre style="
+    background:#f4f1e8;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>Archivos del sitio
+        ↓
+Dockerfile
+        ↓
+Imagen Docker
+        ↓
+Contenedor
+        ↓
+Nginx
+        ↓
+http://localhost:8080</code></pre>
+
+
+                        <p>
+
+                            Nginx trabaja dentro del contenedor utilizando
+                            el puerto 80, mientras que Docker permite acceder
+                            desde el computador mediante el puerto 8080.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- DOCKERFILE                            -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Dockerfile utilizado
+                        </summary>
+
+
+                        <p>
+
+                            El archivo
+                            <strong>Dockerfile</strong>
+                            contiene las instrucciones utilizadas por Docker
+                            para construir la imagen que posteriormente
+                            ejecutará Nginx.
+
+                        </p>
+
+
+                        <p>
+
+                            El Dockerfile utilizado en la primera prueba del
+                            laboratorio contiene:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code># Usar la imagen oficial de nginx como servidor web
+FROM nginx:alpine
+
+# Copiar nuestra página HTML al directorio que nginx sirve por defecto
+COPY index.html /usr/share/nginx/html/index.html</code></pre>
+
+
+                        <p>
+
+                            Este archivo se guarda con el nombre
+                            <strong>Dockerfile</strong>, sin extensión.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- FROM                                  -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Instrucción FROM nginx:alpine
+                        </summary>
+
+
+                        <p>
+
+                            La primera instrucción del Dockerfile es:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>FROM nginx:alpine</code></pre>
+
+
+                        <p>
+
+                            La instrucción
+                            <code>FROM</code>
+                            indica qué imagen se utilizará como base para
+                            construir nuestra propia imagen Docker.
+
+                        </p>
+
+
+                        <p>
+
+                            En este proyecto se utiliza
+                            <code>nginx:alpine</code>,
+                            que proporciona Nginx dentro de una imagen base
+                            utilizada posteriormente para servir la página
+                            web.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- COPY                                  -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Instrucción COPY
+                        </summary>
+
+
+                        <p>
+
+                            La segunda instrucción utilizada es:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>COPY index.html /usr/share/nginx/html/index.html</code></pre>
+
+
+                        <p>
+
+                            La instrucción
+                            <code>COPY</code>
+                            copia el archivo
+                            <code>index.html</code>
+                            del proyecto hacia el directorio utilizado por
+                            Nginx para servir contenido web.
+
+                        </p>
+
+
+                        <p>
+
+                            La ruta:
+
+                        </p>
+
+
+<pre style="
+    background:#f4f1e8;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>/usr/share/nginx/html/</code></pre>
+
+
+                        <p>
+
+                            corresponde al directorio desde el cual Nginx
+                            entrega los archivos web dentro del contenedor.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- CONSTRUCCIÓN IMAGEN                   -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Construcción de la imagen Docker
+                        </summary>
+
+
+                        <p>
+
+                            Una vez creado el archivo Dockerfile, se abre una
+                            terminal o CMD en la carpeta del proyecto.
+
+                        </p>
+
+
+                        <p>
+
+                            El comando utilizado para construir la imagen es:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>docker build -t mi-web-html .</code></pre>
+
+
+                        <p>
+
+                            El comando
+                            <code>docker build</code>
+                            indica a Docker que debe construir una imagen.
+
+                        </p>
+
+
+                        <p>
+
+                            La opción:
+
+                        </p>
+
+
+<pre style="
+    background:#f4f1e8;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>-t mi-web-html</code></pre>
+
+
+                        <p>
+
+                            asigna el nombre
+                            <strong>mi-web-html</strong>
+                            a la imagen generada.
+
+                        </p>
+
+
+                        <p>
+
+                            Finalmente, el punto
+                            <code>.</code>
+                            indica que Docker debe utilizar como contexto
+                            de construcción la carpeta actual.
+
+                        </p>
+
+
+                        <p>
+
+                            Durante este proceso Docker descarga la imagen
+                            base
+                            <code>nginx:alpine</code>
+                            si todavía no se encuentra disponible y genera
+                            posteriormente la nueva imagen del proyecto.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- EJECUCIÓN CONTENEDOR                  -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Ejecución del contenedor
+                        </summary>
+
+
+                        <p>
+
+                            Una vez construida la imagen, se ejecuta el
+                            contenedor utilizando:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>docker run -d -p 8080:80 --name mi-web-container mi-web-html</code></pre>
+
+
+                        <p>
+
+                            Este comando crea y ejecuta un contenedor basado
+                            en la imagen
+                            <code>mi-web-html</code>.
+
+                        </p>
+
+
+                        <p>
+
+                            Las opciones utilizadas tienen las siguientes
+                            funciones:
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+
+                                <strong>-d:</strong>
+                                ejecuta el contenedor en segundo plano,
+                                también denominado modo
+                                <em>detached</em>.
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>-p 8080:80:</strong>
+                                realiza el mapeo de puertos entre el
+                                computador y el contenedor.
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>--name mi-web-container:</strong>
+                                asigna el nombre
+                                <code>mi-web-container</code>
+                                al contenedor.
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>mi-web-html:</strong>
+                                corresponde al nombre de la imagen utilizada
+                                para crear el contenedor.
+
+                            </li>
+
+                        </ul>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- MAPEO DE PUERTOS                      -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Mapeo de puertos 8080:80
+                        </summary>
+
+
+                        <p>
+
+                            Una parte fundamental del comando de ejecución
+                            corresponde a:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>-p 8080:80</code></pre>
+
+
+                        <p>
+
+                            Esta configuración relaciona el
+                            <strong>puerto 8080 del computador</strong>
+                            con el
+                            <strong>puerto 80 del contenedor</strong>.
+
+                        </p>
+
+
+<pre style="
+    background:#f4f1e8;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:center;
+"><code>COMPUTADOR              CONTENEDOR
+
+Puerto 8080    ───────► Puerto 80
+                         │
+                         ▼
+                       Nginx</code></pre>
+
+
+                        <p>
+
+                            Nginx sirve el sitio utilizando el puerto 80
+                            dentro del contenedor, mientras que el usuario
+                            accede desde el navegador mediante el puerto
+                            8080 del computador.
+
+                        </p>
+
+
+                        <p>
+
+                            Por esta razón, para visualizar el sitio se
+                            utiliza:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>http://localhost:8080</code></pre>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- LOCALHOST                             -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Acceso al sitio desde el navegador
+                        </summary>
+
+
+                        <p>
+
+                            Una vez que el contenedor se encuentra
+                            ejecutándose, se abre un navegador web y se
+                            introduce la siguiente dirección:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>http://localhost:8080</code></pre>
+
+
+                        <p>
+
+                            Al acceder a esta dirección, la página web debe
+                            visualizarse correctamente.
+
+                        </p>
+
+
+                        <p>
+
+                            Este resultado confirma que:
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                La imagen Docker fue construida correctamente.
+                            </li>
+
+                            <li>
+                                El contenedor se encuentra funcionando.
+                            </li>
+
+                            <li>
+                                El mapeo de puertos está configurado.
+                            </li>
+
+                            <li>
+                                Nginx está sirviendo el archivo HTML.
+                            </li>
+
+                        </ul>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- DETENER                               -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Detener el contenedor
+                        </summary>
+
+
+                        <p>
+
+                            Para detener el contenedor utilizado en el
+                            laboratorio se ejecuta:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>docker stop mi-web-container</code></pre>
+
+
+                        <p>
+
+                            Este comando detiene el contenedor sin eliminarlo.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- ELIMINAR                              -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Eliminar el contenedor
+                        </summary>
+
+
+                        <p>
+
+                            Si se desea eliminar el contenedor después de
+                            detenerlo, se utiliza:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>docker rm mi-web-container</code></pre>
+
+
+                        <p>
+
+                            Este comando elimina el contenedor del entorno
+                            local.
+
+                        </p>
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- EVIDENCIA CONSTRUCCIÓN                -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Evidencia: construcción de la imagen
+                        </summary>
+
+
+                        <p>
+
+                            Durante la construcción de la imagen se ejecutó
+                            el comando:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>docker build -t mi-web-html .</code></pre>
+
+
+                        <p>
+
+                            La terminal mostró el procesamiento de las
+                            instrucciones del Dockerfile y la creación
+                            correcta de la imagen.
+
+                        </p>
+
+
+                        <!--
+                            Guardar la captura correspondiente dentro de:
+
+                            img/evidencias/nginx-build.png
+
+                            Luego la siguiente imagen aparecerá
+                            automáticamente.
+                        -->
+
+
+                        <img
+                            src="../img/evidencias/nginx-build.png"
+                            alt="Construcción de la imagen Docker con Nginx"
+                            style="
+                                width:100%;
+                                max-width:900px;
+                                height:auto;
+                                border-radius:12px;
+                                margin-top:15px;
+                            "
+                        >
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- EVIDENCIA CONTENEDOR                  -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Evidencia: contenedor en ejecución
+                        </summary>
+
+
+                        <p>
+
+                            El comando de ejecución fue procesado
+                            correctamente y Docker devolvió el identificador
+                            del contenedor creado.
+
+                        </p>
+
+
+                        <p>
+
+                            Esto confirma que el contenedor basado en la
+                            imagen
+                            <code>mi-web-html</code>
+                            fue iniciado.
+
+                        </p>
+
+
+                        <!--
+                            Guardar la captura correspondiente dentro de:
+
+                            img/evidencias/nginx-contenedor.png
+                        -->
+
+
+                        <img
+                            src="../img/evidencias/nginx-contenedor.png"
+                            alt="Terminal mostrando el contenedor Docker en ejecución"
+                            style="
+                                width:100%;
+                                max-width:900px;
+                                height:auto;
+                                border-radius:12px;
+                                margin-top:15px;
+                            "
+                        >
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- EVIDENCIA LOCALHOST                   -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Evidencia: sitio funcionando en localhost:8080
+                        </summary>
+
+
+                        <p>
+
+                            Finalmente, se accede desde el navegador a:
+
+                        </p>
+
+
+<pre style="
+    background:#2b2b2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>http://localhost:8080</code></pre>
+
+
+                        <p>
+
+                            La correcta visualización de la página confirma
+                            que la imagen fue construida y ejecutada
+                            correctamente y que Nginx se encuentra sirviendo
+                            el contenido web desde el contenedor.
+
+                        </p>
+
+
+                        <!--
+                            Guardar la captura correspondiente dentro de:
+
+                            img/evidencias/nginx-localhost.png
+                        -->
+
+
+                        <img
+                            src="../img/evidencias/nginx-localhost.png"
+                            alt="Sitio web funcionando en localhost puerto 8080"
+                            style="
+                                width:100%;
+                                max-width:900px;
+                                height:auto;
+                                border-radius:12px;
+                                margin-top:15px;
+                            "
+                        >
+
+
+                    </details>
+
+
+
+                    <!-- ===================================== -->
+                    <!-- RESUMEN                               -->
+                    <!-- ===================================== -->
+
+                    <details>
+
+
+                        <summary>
+                            Resumen del proceso
+                        </summary>
+
+
+                        <p>
+
+                            El proceso utilizado para publicar el sitio con
+                            Docker y Nginx puede resumirse de la siguiente
+                            manera:
+
+                        </p>
+
+
+<pre style="
+    background:#f4f1e8;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    text-align:left;
+"><code>1. Crear el archivo index.html.
+
+2. Crear el Dockerfile.
+
+3. Utilizar nginx:alpine como imagen base.
+
+4. Copiar index.html al directorio utilizado por Nginx.
+
+5. Construir la imagen:
+
+   docker build -t mi-web-html .
+
+6. Ejecutar el contenedor:
+
+   docker run -d -p 8080:80 --name mi-web-container mi-web-html
+
+7. Abrir:
+
+   http://localhost:8080</code></pre>
+
+
+                        <p>
+
+                            Con este procedimiento se logra publicar una
+                            página web dentro de un contenedor Docker
+                            utilizando Nginx como servidor web.
+
+                        </p>
+
+
+                    </details>
+
+
+                </section>
+
+
+
+                <!-- ========================================= -->
+                <!-- VOLVER                                   -->
+                <!-- ========================================= -->
+
+                <a
+                    href="investigacion.html"
+                    class="volver-integrantes"
+                >
+                    ← Volver a investigación
+                </a>
+
+
+            </main>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ========================================= -->
+<!-- JAVASCRIPT BOOTSTRAP                     -->
+<!-- ========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
